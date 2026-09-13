@@ -53,10 +53,3 @@ pyproject.toml      Package metadata and development tools
 uv.lock            Locked dependencies
 ```
 
-## Local Notes
-
-ChatGPT interaction records and personal learning notes are kept locally and
-excluded from Git: `docs/day*.md`, `docs/masterplan.md`,
-`docs/progression.md`, and the legacy root `masterplan.md` path.
-Put additional interaction records in `docs/local/`, which is also ignored.
-The README and other project documentation remain version-controlled.
