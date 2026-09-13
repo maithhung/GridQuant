@@ -206,6 +206,13 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# Local ChatGPT interaction records and personal learning notes
+/masterplan.md
+/docs/masterplan.md
+/docs/progression.md
+/docs/day*.md
+/docs/local/
+
 # PyPI configuration file
 .pypirc
 
