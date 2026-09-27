@@ -41,11 +41,19 @@ def clear_market(
     Returns:
         MarketResult: The result of the market dispatch.
     """
-    # Check for generator name duplication
+    # Check for duplicate generator names
+    seen_names: set[str] = set()
+
     for generator in generators:
-        if generator.name in [g.name for g in generators if g != generator]:
-            raise ValueError(f"Duplicate generator name found: {generator.name}")
+        if generator.name in seen_names:
+            raise ValueError(
+                f"Duplicate generator name found: {generator.name}"
+            )
+        seen_names.add(generator.name)
+
     # Negative demand check
+    if demand_mw < 0:
+        raise ValueError("Demand must be nonnegative.")    # Negative demand check
     if demand_mw < 0:
         raise ValueError("Demand must be nonnegative.")
     # Sort generators by marginal cost

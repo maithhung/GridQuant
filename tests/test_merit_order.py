@@ -77,3 +77,12 @@ def test_demand_exceeds_total_capacity() -> None:
             "C": 80.0 * (70.0 - 70.0) * duration_hours,
         }
     )
+
+def test_identical_duplicate_names_are_rejected() -> None:
+    generators = [
+        GeneratorOffer("A", 50.0, 10.0),
+        GeneratorOffer("A", 50.0, 10.0),
+    ]
+
+    with pytest.raises(ValueError, match="Duplicate generator name"):
+        clear_market(generators, demand_mw=75.0)
