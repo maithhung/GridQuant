@@ -49,9 +49,6 @@ shortage, the highest marginal cost among dispatched generators sets the model
 price, and unmet demand is reported. With no dispatch, price is `None`; profits
 are zero for zero demand and `None` for positive unmet demand.
 
-The output API replaces `cleared_volume_mwh` / `delivered_volume_mwh` with
-`cleared_volume_mw` / `cleared_energy_mwh`, and `unmet_demand_mwh` with
-`unmet_demand_mw` / `unmet_energy_mwh`. Update callers to use the matching unit.
 
 ## Development
 
