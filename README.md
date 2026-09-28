@@ -4,8 +4,9 @@ Reproducible short-term electricity market simulation and forecasting.
 
 GridQuant is an early-stage Python toolkit for electricity-market research.
 The current implementation provides an installable package, CLI help and
-version output, a pure-Python merit-order calculator, and development checks.
-Market-data collection, broader simulation, forecasting, and backtesting are planned.
+version output, a pure-Python merit-order calculator, and a basic Energy-Charts
+price collector with JSON parsing and local storage. Broader simulation,
+forecasting, and backtesting are planned.
 
 ## Setup
 
@@ -50,6 +51,29 @@ price, and unmet demand is reported. With no dispatch, price is `None`; profits
 are zero for zero demand and `None` for positive unmet demand.
 
 
+## Electricity-price example
+
+From the repository root:
+
+```powershell
+uv run python json_practice.py
+```
+
+The example selects DE-LU prices for 2026-09-26. It verifies and reuses a saved
+response/manifest pair when present; otherwise it downloads and saves one.
+The saved sample produces `Parsed 96 intervals`. UTC starts/ends and prices in
+EUR/MWh are printed for the first five records. Offline replay requires both
+files in `data/raw/energy_charts/DE-LU/`; a missing cache triggers HTTP even if
+uv itself was invoked with `--offline`.
+
+The adapter provides `fetch_price_response(start_date, end_date)` and
+`parse_price_response(raw_json)`. Storage helpers build manifests and save raw
+bytes without overwriting existing files. Requests have a 30-second timeout;
+retries, refresh, atomic writes, and revision storage are future work.
+
+See the [source contract and attribution](docs/data_sources.md) and
+[historical sample checks](reports/historical_sample_coverage.md).
+
 ## Development
 
 ```sh
@@ -58,6 +82,10 @@ uv run ruff format --check .
 uv run mypy src
 uv run pytest
 ```
+
+Session 3 verification (2026-09-28): 64 tests and source type checking pass.
+Six parser exception-type lint findings and one model-file formatting issue
+remain; the project does not yet pass every quality gate.
 
 Build the source distribution and wheel in `dist/`:
 
@@ -73,9 +101,17 @@ src/gridquant/
     cli.py          CLI entry point and version option
     logging.py      Logging experiments; setup is unfinished
     merit_order.py  Generator offers, dispatch, and power/energy results
+    collectors/energy_charts.py  Price fetching and JSON parsing
+    data/models.py  Typed UTC price intervals
+    data/storage.py  Manifest creation and raw-response storage
 tests/
     test_cli.py     CLI help test
     test_merit_order.py  Calculator and output-unit tests
+    test_energy_charts.py  Parser and time-coverage tests
+    test_energy_charts_fetch.py  Offline HTTP tests
+    test_storage.py  Manifest and storage tests
+json_practice.py    Fetch/cache/parse demonstration
+docs/data_sources.md  Source contract and attribution
 pyproject.toml      Package metadata and development tools
 uv.lock            Locked dependencies
 ```

@@ -1,0 +1,20 @@
+[
+  {
+    "delivery_date": "2023-02-15",
+    "start_utc": "2023-02-14T23:00:00.0000000Z",
+    "end_utc": "2023-02-15T23:00:00.0000000Z",
+    "calendar_source": "Windows W. Europe Standard Time (Berlin) timezone rules"
+  },
+  {
+    "delivery_date": "2023-03-26",
+    "start_utc": "2023-03-25T23:00:00.0000000Z",
+    "end_utc": "2023-03-26T22:00:00.0000000Z",
+    "calendar_source": "Windows W. Europe Standard Time (Berlin) timezone rules"
+  },
+  {
+    "delivery_date": "2023-10-29",
+    "start_utc": "2023-10-28T22:00:00.0000000Z",
+    "end_utc": "2023-10-29T23:00:00.0000000Z",
+    "calendar_source": "Windows W. Europe Standard Time (Berlin) timezone rules"
+  }
+]
