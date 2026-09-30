@@ -10,6 +10,8 @@ from gridquant.collectors.energy_charts import (
 )
 from gridquant.data.storage import build_manifest, save_response
 
+from gridquant.data.models import DatasetMetadata, PriceDataset
+
 # Select the bidding zone and local delivery dates.
 parameters = {
     "bzn": "DE-LU",
@@ -77,6 +79,37 @@ else:
     save_response(sample_path, raw_bytes, manifest)
 
     print("Downloaded response and saved manifest.")
+
+# Recover the original retrieval time from the saved manifest.
+retrieved_at = datetime.fromisoformat(manifest["retrieved_at_utc"])
+
+if retrieved_at.tzinfo is None or retrieved_at.utcoffset() is None:
+    raise ValueError("Retrieval time must include a UTC offset.")
+
+# Describe the source snapshot shared by these intervals.
+metadata = DatasetMetadata(
+    source=manifest["source"],
+    source_document_id=sample_path.as_posix(),
+    raw_sha256=manifest["raw_sha256"],
+    retrieved_at_utc=retrieved_at.astimezone(UTC),
+    availability_evidence="unknown",
+    availability_note=(
+        "Saved historical response; publication time and "
+        "historical revision availability have not been established."
+    ),
+)
+
+# Combine the parsed records with their source metadata.
+dataset = PriceDataset(
+    series_id="day_ahead_price",
+    metadata=metadata,
+    intervals=tuple(intervals),
+)
+
+print(f"Series: {dataset.series_id}")
+print(f"Source: {dataset.metadata.source}")
+print(f"Intervals: {len(dataset.intervals)}")
+print(f"First interval: {dataset.intervals[0] if dataset.intervals else None}")
 
 # Display a short summary.
 print(f"Sample: {sample_path}")
