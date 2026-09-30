@@ -5,7 +5,8 @@ Reproducible short-term electricity market simulation and forecasting.
 GridQuant is an early-stage Python toolkit for electricity-market research.
 The current implementation provides an installable package, CLI help and
 version output, a pure-Python merit-order calculator, and a basic Energy-Charts
-price collector with JSON parsing and local storage. Broader simulation,
+price collector with JSON parsing, typed datasets, Parquet storage, and
+JSON/Markdown interval-start coverage reports. Broader simulation,
 forecasting, and backtesting are planned.
 
 ## Setup
@@ -23,8 +24,10 @@ uv run gridquant --help
 uv run gridquant --version
 ```
 
-The CLI currently emits demonstration warning and error messages on startup,
-including for successful help and version requests. Logging setup is unfinished.
+Help, `--version`, and `-v` exit successfully with no stderr output. Importing
+the package's CLI/logging modules does not emit messages or configure logging.
+Command execution configures diagnostics on stderr without replacing existing
+logging handlers.
 
 ## Merit-order calculator
 
@@ -112,18 +115,33 @@ matching starts; 100% alone does not imply a complete grid if extra rows exist.
 Interval ends, price conflicts, ordering, and historical availability remain
 outside this check. No forecasting eligibility is inferred from a passing report.
 
+See the [implemented data contract](docs/data_contract.md) and
+[example coverage report](reports/quality/DE-LU/2026-09-26_2026-09-26.md).
+All four saved samples have normalized outputs and complete start grids.
+The practice example is configured for one 15-minute delivery day; when using
+the functions for hourly data, pass an expected interval length of 60 minutes.
+
+Session 4 is complete for its agreed learning scope. Historical publication and
+revision availability remain unverified; no availability filter is implemented.
+Session 5 will use a latest-vintage historical benchmark unless additional
+evidence supports stronger claims. A contiguous development dataset and a frozen
+evaluation protocol are still needed before training; the four samples alone
+are insufficient. See the [availability decision](docs/data_sources.md).
+
 ## Development
 
 ```sh
 uv run ruff check .
 uv run ruff format --check .
 uv run mypy src
-uv run pytest
+uv run python -m pytest
 ```
 
-Session 3 verification (2026-09-28): 64 tests and source type checking pass.
-Six parser exception-type lint findings and one model-file formatting issue
-remain; the project does not yet pass every quality gate.
+Session 5 Step 1 verification (2026-09-30): 96 tests pass, mypy passes all
+12 source files, and Ruff lint and formatting pass. Tests exercise the installed
+CLI in fresh processes, quiet imports, and diagnostics on stderr. A fresh wheel
+installation outside the repository remains a later release check; this is not
+an R1 release.
 
 Build the source distribution and wheel in `dist/`:
 
@@ -137,19 +155,25 @@ uv build
 src/gridquant/
     __init__.py
     cli.py          CLI entry point and version option
-    logging.py      Logging experiments; setup is unfinished
+    logging.py      CLI diagnostic configuration; quiet on import
     merit_order.py  Generator offers, dispatch, and power/energy results
     collectors/energy_charts.py  Price fetching and JSON parsing
-    data/models.py  Typed UTC price intervals
+    data/models.py  Price intervals, source metadata, dataset container
     data/storage.py  Manifest creation and raw-response storage
+    data/quality.py  One-day Berlin interval-start coverage
+    data/normalized.py  Parquet save/load with embedded provenance
+    data/reporting.py  JSON and Markdown coverage reports
 tests/
-    test_cli.py     CLI help test
+    test_cli.py     Fresh-process help/version, quiet imports, stderr diagnostics
     test_merit_order.py  Calculator and output-unit tests
     test_energy_charts.py  Parser and time-coverage tests
     test_energy_charts_fetch.py  Offline HTTP tests
     test_storage.py  Manifest and storage tests
-json_practice.py    Fetch/cache/parse demonstration
+    test_quality.py  Coverage and DST tests
+    test_normalized_reporting.py  Storage round trips and report tests
+json_practice.py    Fetch/cache/parse, Parquet, and reporting demonstration
 docs/data_sources.md  Source contract and attribution
+docs/data_contract.md  Implemented dataset, storage, and reporting contract
 pyproject.toml      Package metadata and development tools
 uv.lock            Locked dependencies
 ```

@@ -1,6 +1,8 @@
 # Electricity-price data source
 
-Recorded: 2026-09-28. Current adapter: Energy-Charts, DE-LU day-ahead prices.
+Updated: 2026-09-30 (Session 4 wrap-up). Current adapter: Energy-Charts,
+DE-LU day-ahead prices. External source-check statements below retain their
+Session 3 context; no fresh provider-policy audit was performed for this wrap-up.
 
 ## Request contract
 
@@ -38,8 +40,9 @@ energy, not a household tariff or a total payment.
 The parser validates required structures/values and endpoint identity. It does
 not require `schema_version == "2.0"`; the version present in saved responses is
 descriptive metadata. A valid empty list returns an empty result. Global timing
-consistency, requested-day coverage, and all metadata relationships are not yet
-enforced for arbitrary responses.
+consistency and all metadata relationships are not yet enforced by the parser.
+Session 4 adds a separate one-day start-coverage checker; it does not validate
+interval ends, ordering, or conflicting prices.
 
 ## Provenance and local storage
 
@@ -58,7 +61,7 @@ either existing file. The practice script checks endpoint, parameters, and hash
 before loading cached data.
 
 Sequential writes are not an atomic pair. Refresh, revisions, automatic recovery,
-and a reusable loading helper are intentionally deferred. A valid hash establishes
+and a reusable raw-response loading helper are intentionally deferred. A valid hash establishes
 byte integrity against the manifest, not source accuracy or historical availability.
 
 ## Attribution and evidence
@@ -78,5 +81,37 @@ for 2026-09-26 contains 96 quarter-hourly records and supports the practice demo
 
 These downloads are retrieved historical values, not archived auction-time
 vintages. Neither API generation time nor GridQuant retrieval time proves when a
-historical value first became available. Broader coverage, revisions, and
-forecast-time eligibility are Session 4 research tasks.
+historical value first became available.
+
+## Session 4 storage and quality contract
+
+Normalized Parquet snapshots and JSON/Markdown reports are implemented for all
+four saved samples. See the [data contract](data_contract.md) for types, embedded
+metadata, output paths, replay behavior, and validation boundaries. The original
+responses and manifests remain the evidence for source attribution and requests.
+
+## Historical availability decision, 2026-09-30
+
+| Question | Current evidence and conclusion |
+| --- | --- |
+| Which bytes were retrieved? | Raw response and matching SHA-256 in the saved manifest identify each snapshot. |
+| When did GridQuant retrieve them? | The manifest records retrieval time; replay preserves it. |
+| When was each exact historical value published? | Not established; source_publication_date remains null. |
+| Can past values change, and under what policy? | Provider revision policy has not been verified in this session. |
+| Can older versions be recovered? | Not established; no historical vintage archive has been verified. |
+
+The evidence is the local raw/manifest pairs described above and their linked
+quality reports. The existing API specification reference documents the source
+contract, not a verified historical availability guarantee for these snapshots.
+This is an explicit evidence gap, not a finding that the provider has no archives.
+
+**Decision:** use a latest-vintage historical benchmark for Session 5 unless
+further evidence supports historical replay. Here latest-vintage means the
+historical snapshot retrieved and frozen locally, not a promise that it remains
+the provider's newest revision. Keep source_publication_date and source_revision
+null, and availability_evidence unknown. This limitation applies to lagged prices,
+training labels, and any future features.
+
+The user chose to defer availability.py. No eligibility filtering is implemented
+or required for closing this learning session. Revisit it when a forecasting
+workflow needs to select versions demonstrably available at each issuance time.

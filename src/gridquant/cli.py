@@ -1,24 +1,13 @@
-import logging
 from importlib.metadata import version
 
 import typer
 
-logger = logging.getLogger(__name__)
-
-logger.info("Logging is set up for gridquant.")
-logger.warning("This is a warning message from gridquant logging.")
-logger.error("This is an error message from gridquant logging.")
+from gridquant.logging import configure_logging
 
 app = typer.Typer(
     name="gridquant",
     help="Quantitative research toolkit for electricity markets.",
 )
-
-
-# @app.command()
-# def hello() -> None:
-#     """Test the GridQuant CLI."""
-#     typer.echo("Hello from GridQuant!")
 
 
 def version_callback(value: bool) -> None:
@@ -30,7 +19,7 @@ def version_callback(value: bool) -> None:
 @app.callback()
 def main(
     version: bool = typer.Option(
-        None,
+        False,
         "--version",
         "-v",
         help="Show the version of the package and exit.",
@@ -39,6 +28,7 @@ def main(
     ),
 ) -> None:
     """GridQuant command-line interface."""
+    configure_logging()
 
 
 if __name__ == "__main__":

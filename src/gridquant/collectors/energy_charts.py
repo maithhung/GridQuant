@@ -25,7 +25,7 @@ def fetch_price_response(start_date: str, end_date: str) -> bytes:
 
 
 def parse_price_response(raw_json: str) -> list[PriceInterval]:
-    """Convert JSON text into a list of PriceInterval objects."""
+    """Parse intervals; wrong field types raise TypeError, invalid values ValueError."""
     data = json.loads(raw_json)
     intervals: list[PriceInterval] = []
 
@@ -44,11 +44,9 @@ def parse_price_response(raw_json: str) -> list[PriceInterval]:
 
     interval_minutes = data.get("interval_minutes")
 
-    if (
-        isinstance(interval_minutes, bool)
-        or not isinstance(interval_minutes, int)
-        or interval_minutes <= 0
-    ):
+    if isinstance(interval_minutes, bool) or not isinstance(interval_minutes, int):
+        raise TypeError("Interval minutes must be a positive integer.")
+    if interval_minutes <= 0:
         raise ValueError("Interval minutes must be a positive integer.")
 
     records = data.get("data")
@@ -63,7 +61,7 @@ def parse_price_response(raw_json: str) -> list[PriceInterval]:
         timestamp = record.get("timestamp")
 
         if not isinstance(timestamp, str):
-            raise ValueError(f"Record {index}: timestamp must be text.")
+            raise TypeError(f"Record {index}: timestamp must be text.")
 
         try:
             start = datetime.fromisoformat(timestamp)
@@ -81,7 +79,7 @@ def parse_price_response(raw_json: str) -> list[PriceInterval]:
         price = values.get("day_ahead_price")
 
         if isinstance(price, bool) or not isinstance(price, (int, float)):
-            raise ValueError(f"Record {index}: price must be a number.")
+            raise TypeError(f"Record {index}: price must be a number.")
 
         if not isfinite(price):
             raise ValueError(f"Record {index}: price must be finite.")

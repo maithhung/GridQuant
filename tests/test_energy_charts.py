@@ -52,20 +52,21 @@ def test_parse_price_response() -> None:
 
 
 @pytest.mark.parametrize(
-    "field, invalid_value, expected_error",
+    "field, invalid_value, exception_type, expected_error",
     [
-        ("bidding_zone", "FR", "Expected bidding zone"),
-        ("unit", "EUR/kWh", "Expected price unit"),
-        ("interval_minutes", 0, "positive integer"),
-        ("interval_minutes", -15, "positive integer"),
-        ("interval_minutes", True, "positive integer"),
-        ("interval_minutes", "15", "positive integer"),
-        ("interval_minutes", None, "positive integer"),
+        ("bidding_zone", "FR", ValueError, "Expected bidding zone"),
+        ("unit", "EUR/kWh", ValueError, "Expected price unit"),
+        ("interval_minutes", 0, ValueError, "positive integer"),
+        ("interval_minutes", -15, ValueError, "positive integer"),
+        ("interval_minutes", True, TypeError, "positive integer"),
+        ("interval_minutes", "15", TypeError, "positive integer"),
+        ("interval_minutes", None, TypeError, "positive integer"),
     ],
 )
 def test_rejects_invalid_metadata(
     field: str,
     invalid_value: object,
+    exception_type: type[Exception],
     expected_error: str,
 ) -> None:
     response: dict[str, object] = {
@@ -77,15 +78,22 @@ def test_rejects_invalid_metadata(
     }
     response[field] = invalid_value
 
-    with pytest.raises(ValueError, match=expected_error):
+    with pytest.raises(exception_type, match=expected_error):
         parse_price_response(json.dumps(response))
 
 
 @pytest.mark.parametrize(
-    "price",
-    [None, True, "40.0", float("nan"), float("inf"), -float("inf")],
+    "price, exception_type",
+    [
+        (None, TypeError),
+        (True, TypeError),
+        ("40.0", TypeError),
+        (float("nan"), ValueError),
+        (float("inf"), ValueError),
+        (-float("inf"), ValueError),
+    ],
 )
-def test_rejects_invalid_prices(price: object) -> None:
+def test_rejects_invalid_prices(price: object, exception_type: type[Exception]) -> None:
     response = {
         "endpoint": "price",
         "bidding_zone": "DE-LU",
@@ -99,19 +107,21 @@ def test_rejects_invalid_prices(price: object) -> None:
         ],
     }
 
-    with pytest.raises(ValueError, match="price must"):
+    with pytest.raises(exception_type, match="price must"):
         parse_price_response(json.dumps(response))
 
 
 @pytest.mark.parametrize(
-    "timestamp",
+    "timestamp, exception_type",
     [
-        None,
-        "not-a-date",
-        "2026-09-26T00:00:00",
+        (None, TypeError),
+        ("not-a-date", ValueError),
+        ("2026-09-26T00:00:00", ValueError),
     ],
 )
-def test_rejects_invalid_timestamps(timestamp: object) -> None:
+def test_rejects_invalid_timestamps(
+    timestamp: object, exception_type: type[Exception]
+) -> None:
     response = {
         "endpoint": "price",
         "bidding_zone": "DE-LU",
@@ -125,7 +135,7 @@ def test_rejects_invalid_timestamps(timestamp: object) -> None:
         ],
     }
 
-    with pytest.raises(ValueError, match="timestamp"):
+    with pytest.raises(exception_type, match="timestamp"):
         parse_price_response(json.dumps(response))
 
 

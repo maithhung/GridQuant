@@ -1,7 +1,7 @@
 [project]
 name = "gridquant"
 version = "0.1.0"
-description = "Add your description here"
+description = "Electricity-market research toolkit with merit-order simulation and price-data validation."
 readme = "README.md"
 authors = [
     { name = "maithanhhung5", email = "thanh.h.mai@campus.tu-berlin.de" }
