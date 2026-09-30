@@ -1,0 +1,1095 @@
+{
+  "breakdowns": {
+    "previous_day": {
+      "high_price": {
+        "bias": null,
+        "count": 0,
+        "duration_hours": 0.0,
+        "mae": null,
+        "rmse": null
+      },
+      "local_delivery_date:2023-03-12": {
+        "bias": 3.0725000000000002,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 15.695833333333335,
+        "rmse": 19.813766889042917
+      },
+      "local_delivery_date:2023-03-13": {
+        "bias": 58.39333333333334,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 58.39333333333334,
+        "rmse": 61.39321420157117
+      },
+      "local_delivery_date:2023-03-14": {
+        "bias": -34.34041666666667,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 44.78458333333333,
+        "rmse": 51.24111455494829
+      },
+      "local_delivery_date:2023-03-15": {
+        "bias": -56.245000000000005,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 56.245000000000005,
+        "rmse": 64.6744617939209
+      },
+      "local_delivery_date:2023-03-16": {
+        "bias": 22.150000000000002,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 23.28,
+        "rmse": 30.49872961835187
+      },
+      "local_delivery_date:2023-03-17": {
+        "bias": 13.227083333333331,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 23.312083333333334,
+        "rmse": 28.98983349095564
+      },
+      "local_delivery_date:2023-03-18": {
+        "bias": -16.99,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 19.049999999999997,
+        "rmse": 24.700139507028428
+      },
+      "local_delivery_date:2023-03-19": {
+        "bias": -2.6545833333333353,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 5.608750000000001,
+        "rmse": 7.229614731551514
+      },
+      "local_delivery_date:2023-03-20": {
+        "bias": -13.180833333333334,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 14.738333333333335,
+        "rmse": 19.566071399235973
+      },
+      "local_delivery_date:2023-03-21": {
+        "bias": 10.120416666666669,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 10.271250000000002,
+        "rmse": 14.150850239473248
+      },
+      "local_delivery_date:2023-03-22": {
+        "bias": 34.874583333333334,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 35.17041666666667,
+        "rmse": 42.41833580540378
+      },
+      "local_delivery_date:2023-03-23": {
+        "bias": 5.468333333333334,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 13.616666666666667,
+        "rmse": 15.261096782341694
+      },
+      "local_delivery_date:2023-03-24": {
+        "bias": 21.59375,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 21.75208333333333,
+        "rmse": 26.597683248107657
+      },
+      "local_delivery_date:2023-03-25": {
+        "bias": 38.44958333333333,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 38.44958333333333,
+        "rmse": 42.330741045958554
+      },
+      "local_delivery_date:2023-03-26": {
+        "bias": -55.32478260869566,
+        "count": 23,
+        "duration_hours": 23.0,
+        "mae": 55.32478260869566,
+        "rmse": 57.08821758433628
+      },
+      "local_delivery_date:2023-03-27": {
+        "bias": -21.694420289855074,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 23.765253623188404,
+        "rmse": 34.173954609398706
+      },
+      "local_delivery_date:2023-03-28": {
+        "bias": -20.832916666666666,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 23.414583333333336,
+        "rmse": 27.764984167712637
+      },
+      "local_delivery_date:2023-03-29": {
+        "bias": -3.387916666666666,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 14.076249999999996,
+        "rmse": 15.504514799459757
+      },
+      "local_delivery_date:2023-03-30": {
+        "bias": 35.098333333333336,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 35.098333333333336,
+        "rmse": 43.67020084298522
+      },
+      "local_delivery_date:2023-03-31": {
+        "bias": -16.152916666666666,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 28.41625,
+        "rmse": 37.284984857625105
+      },
+      "local_delivery_date:2023-04-01": {
+        "bias": 41.82791666666667,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 43.249583333333334,
+        "rmse": 50.636305116322745
+      },
+      "local_hour:0": {
+        "bias": -0.5699999999999994,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.836666666666666,
+        "rmse": 41.605449562927845
+      },
+      "local_hour:1": {
+        "bias": 0.34333333333333305,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.21666666666667,
+        "rmse": 38.528596615278595
+      },
+      "local_hour:10": {
+        "bias": 2.1066666666666665,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.342857142857145,
+        "rmse": 37.07264053436815
+      },
+      "local_hour:11": {
+        "bias": 1.7076190476190471,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 28.245714285714286,
+        "rmse": 37.354341750578975
+      },
+      "local_hour:12": {
+        "bias": 1.7952380952380953,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.07904761904762,
+        "rmse": 38.284076137661806
+      },
+      "local_hour:13": {
+        "bias": 1.0180952380952382,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.41142857142857,
+        "rmse": 42.901257501827324
+      },
+      "local_hour:14": {
+        "bias": 1.28,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 33.801904761904765,
+        "rmse": 45.144468732535294
+      },
+      "local_hour:15": {
+        "bias": 2.2028571428571424,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.6647619047619,
+        "rmse": 43.37614123653035
+      },
+      "local_hour:16": {
+        "bias": 2.8890476190476186,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.27857142857143,
+        "rmse": 40.79475812498697
+      },
+      "local_hour:17": {
+        "bias": 3.712380952380953,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.26,
+        "rmse": 35.51557257370484
+      },
+      "local_hour:18": {
+        "bias": 2.8623809523809522,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 27.234761904761907,
+        "rmse": 31.436379971527987
+      },
+      "local_hour:19": {
+        "bias": 2.1780952380952376,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 25.919999999999998,
+        "rmse": 32.12752031988715
+      },
+      "local_hour:2": {
+        "bias": 4.487695652173913,
+        "count": 20,
+        "duration_hours": 20.0,
+        "mae": 26.52630434782609,
+        "rmse": 36.35736003031974
+      },
+      "local_hour:20": {
+        "bias": 2.223333333333334,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 24.134761904761906,
+        "rmse": 30.75520203771961
+      },
+      "local_hour:21": {
+        "bias": 2.1123809523809522,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 23.65809523809524,
+        "rmse": 31.507457469470243
+      },
+      "local_hour:22": {
+        "bias": 1.9338095238095239,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 24.70714285714286,
+        "rmse": 33.264580977656216
+      },
+      "local_hour:23": {
+        "bias": 1.9938095238095237,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 24.343333333333334,
+        "rmse": 31.72302205924632
+      },
+      "local_hour:3": {
+        "bias": 2.075714285714286,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 26.870952380952385,
+        "rmse": 36.63330211446306
+      },
+      "local_hour:4": {
+        "bias": 2.467619047619048,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 26.597142857142856,
+        "rmse": 37.53720655816674
+      },
+      "local_hour:5": {
+        "bias": 2.897619047619048,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 26.85285714285714,
+        "rmse": 38.249644567287284
+      },
+      "local_hour:6": {
+        "bias": 3.3276190476190473,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 30.872380952380954,
+        "rmse": 40.510180143244185
+      },
+      "local_hour:7": {
+        "bias": 2.78,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 30.705714285714283,
+        "rmse": 39.669733814992775
+      },
+      "local_hour:8": {
+        "bias": 2.516666666666667,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 30.123333333333328,
+        "rmse": 39.80272908805554
+      },
+      "local_hour:9": {
+        "bias": 2.188571428571429,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 30.90190476190476,
+        "rmse": 37.96379440617449
+      },
+      "month:2023-03": {
+        "bias": 0.1978787328673868,
+        "count": 479,
+        "duration_hours": 479.0,
+        "mae": 27.966171371516747,
+        "rmse": 36.860549557905756
+      },
+      "month:2023-04": {
+        "bias": 41.82791666666667,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 43.249583333333334,
+        "rmse": 50.636305116322745
+      },
+      "negative_price": {
+        "bias": 30.150000000000002,
+        "count": 9,
+        "duration_hours": 9.0,
+        "mae": 30.150000000000002,
+        "rmse": 38.06062400959816
+      }
+    },
+    "previous_week": {
+      "high_price": {
+        "bias": null,
+        "count": 0,
+        "duration_hours": 0.0,
+        "mae": null,
+        "rmse": null
+      },
+      "local_delivery_date:2023-03-12": {
+        "bias": 26.254166666666663,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 27.377499999999998,
+        "rmse": 31.146922801458253
+      },
+      "local_delivery_date:2023-03-13": {
+        "bias": 113.53375,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 113.53375,
+        "rmse": 116.53381910773085
+      },
+      "local_delivery_date:2023-03-14": {
+        "bias": 35.38833333333333,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 36.1325,
+        "rmse": 46.28793345282692
+      },
+      "local_delivery_date:2023-03-15": {
+        "bias": 11.16583333333333,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 19.434166666666666,
+        "rmse": 25.032166473026926
+      },
+      "local_delivery_date:2023-03-16": {
+        "bias": 21.624583333333334,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 21.93541666666667,
+        "rmse": 25.200732876247866
+      },
+      "local_delivery_date:2023-03-17": {
+        "bias": 23.26625,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 26.071249999999996,
+        "rmse": 31.880983033254584
+      },
+      "local_delivery_date:2023-03-18": {
+        "bias": -10.732499999999996,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 12.598333333333331,
+        "rmse": 16.04091435465364
+      },
+      "local_delivery_date:2023-03-19": {
+        "bias": -16.459583333333335,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 17.50625,
+        "rmse": 20.881505074267675
+      },
+      "local_delivery_date:2023-03-20": {
+        "bias": -88.03375,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 88.03375,
+        "rmse": 88.98495694498031
+      },
+      "local_delivery_date:2023-03-21": {
+        "bias": -43.572916666666664,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 52.548750000000005,
+        "rmse": 63.86896824097495
+      },
+      "local_delivery_date:2023-03-22": {
+        "bias": 47.546666666666674,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 47.546666666666674,
+        "rmse": 49.052584369565416
+      },
+      "local_delivery_date:2023-03-23": {
+        "bias": 30.865,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 33.744166666666665,
+        "rmse": 39.829484576964674
+      },
+      "local_delivery_date:2023-03-24": {
+        "bias": 39.23166666666667,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 39.7875,
+        "rmse": 46.322219470429815
+      },
+      "local_delivery_date:2023-03-25": {
+        "bias": 94.67125,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 94.67125,
+        "rmse": 94.83988416888047
+      },
+      "local_delivery_date:2023-03-26": {
+        "bias": 41.90695652173913,
+        "count": 23,
+        "duration_hours": 23.0,
+        "mae": 41.90695652173913,
+        "rmse": 44.437225483772636
+      },
+      "local_delivery_date:2023-03-27": {
+        "bias": 32.85458333333334,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 33.08791666666667,
+        "rmse": 36.82488385362992
+      },
+      "local_delivery_date:2023-03-28": {
+        "bias": 1.9012499999999999,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 15.488750000000001,
+        "rmse": 19.062112619014716
+      },
+      "local_delivery_date:2023-03-29": {
+        "bias": -36.36125,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 36.36125,
+        "rmse": 44.33680313802519
+      },
+      "local_delivery_date:2023-03-30": {
+        "bias": -6.731249999999999,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 28.905416666666667,
+        "rmse": 32.340421237722516
+      },
+      "local_delivery_date:2023-03-31": {
+        "bias": -44.477916666666665,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 44.53375,
+        "rmse": 55.28518657078646
+      },
+      "local_delivery_date:2023-04-01": {
+        "bias": -41.099583333333335,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 41.099583333333335,
+        "rmse": 42.963197962519814
+      },
+      "local_hour:0": {
+        "bias": 9.231428571428571,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 44.304761904761904,
+        "rmse": 55.042707055521895
+      },
+      "local_hour:1": {
+        "bias": 9.526190476190477,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 41.90047619047619,
+        "rmse": 53.539118809120716
+      },
+      "local_hour:10": {
+        "bias": 10.38952380952381,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 48.82285714285714,
+        "rmse": 59.14329370669333
+      },
+      "local_hour:11": {
+        "bias": 10.907142857142858,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 52.00904761904762,
+        "rmse": 61.204543676647624
+      },
+      "local_hour:12": {
+        "bias": 12.212380952380949,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 52.86666666666667,
+        "rmse": 62.785863892773705
+      },
+      "local_hour:13": {
+        "bias": 14.355714285714287,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 53.43857142857143,
+        "rmse": 62.81308488948249
+      },
+      "local_hour:14": {
+        "bias": 17.128571428571426,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 53.23428571428572,
+        "rmse": 62.17389239253157
+      },
+      "local_hour:15": {
+        "bias": 18.03095238095238,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 50.30238095238095,
+        "rmse": 61.02542448302456
+      },
+      "local_hour:16": {
+        "bias": 18.204285714285714,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 45.76428571428571,
+        "rmse": 58.82733770879626
+      },
+      "local_hour:17": {
+        "bias": 18.196666666666665,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 36.51571428571428,
+        "rmse": 48.30012308965879
+      },
+      "local_hour:18": {
+        "bias": 15.614761904761902,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 33.679523809523815,
+        "rmse": 43.209251158916025
+      },
+      "local_hour:19": {
+        "bias": 9.37904761904762,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.292380952380952,
+        "rmse": 38.71619434760996
+      },
+      "local_hour:2": {
+        "bias": 7.4235,
+        "count": 20,
+        "duration_hours": 20.0,
+        "mae": 40.4505,
+        "rmse": 52.031081432159375
+      },
+      "local_hour:20": {
+        "bias": 7.619047619047618,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 28.217142857142854,
+        "rmse": 35.407787951509306
+      },
+      "local_hour:21": {
+        "bias": 8.175714285714285,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 30.550952380952385,
+        "rmse": 39.33123156208659
+      },
+      "local_hour:22": {
+        "bias": 7.305238095238094,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.09761904761905,
+        "rmse": 41.996977158793115
+      },
+      "local_hour:23": {
+        "bias": 7.12952380952381,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.66285714285714,
+        "rmse": 41.95777934565945
+      },
+      "local_hour:3": {
+        "bias": 10.886666666666667,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 42.42761904761905,
+        "rmse": 53.92815979659995
+      },
+      "local_hour:4": {
+        "bias": 10.341904761904761,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 45.6047619047619,
+        "rmse": 57.01044231834492
+      },
+      "local_hour:5": {
+        "bias": 11.24952380952381,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 44.39142857142857,
+        "rmse": 56.920647354348446
+      },
+      "local_hour:6": {
+        "bias": 9.768571428571429,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 39.38380952380952,
+        "rmse": 52.6896468550918
+      },
+      "local_hour:7": {
+        "bias": 5.96,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 35.69714285714286,
+        "rmse": 45.8204331629252
+      },
+      "local_hour:8": {
+        "bias": 7.090952380952382,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 39.04142857142857,
+        "rmse": 49.970467421124994
+      },
+      "local_hour:9": {
+        "bias": 8.220952380952383,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 44.19428571428571,
+        "rmse": 56.57578440421645
+      },
+      "month:2023-03": {
+        "bias": 13.633152400835073,
+        "count": 479,
+        "duration_hours": 479.0,
+        "mae": 41.55954070981211,
+        "rmse": 53.19424909660802
+      },
+      "month:2023-04": {
+        "bias": -41.099583333333335,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 41.099583333333335,
+        "rmse": 42.963197962519814
+      },
+      "negative_price": {
+        "bias": 104.78888888888889,
+        "count": 9,
+        "duration_hours": 9.0,
+        "mae": 104.78888888888889,
+        "rmse": 107.046535467317
+      }
+    },
+    "ridge": {
+      "high_price": {
+        "bias": null,
+        "count": 0,
+        "duration_hours": 0.0,
+        "mae": null,
+        "rmse": null
+      },
+      "local_delivery_date:2023-03-12": {
+        "bias": 12.578737315824872,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 17.674410065963063,
+        "rmse": 19.889456987392787
+      },
+      "local_delivery_date:2023-03-13": {
+        "bias": 89.45950049452205,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 89.45950049452205,
+        "rmse": 91.52533242445769
+      },
+      "local_delivery_date:2023-03-14": {
+        "bias": 11.66484506237372,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 30.308384924991884,
+        "rmse": 38.58432340594357
+      },
+      "local_delivery_date:2023-03-15": {
+        "bias": -27.647963854781935,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 27.807252716735103,
+        "rmse": 33.98622239592709
+      },
+      "local_delivery_date:2023-03-16": {
+        "bias": 23.184518991639447,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 23.574576377322185,
+        "rmse": 27.024633648784988
+      },
+      "local_delivery_date:2023-03-17": {
+        "bias": 16.44432638226844,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 21.831076760402983,
+        "rmse": 27.4287166315376
+      },
+      "local_delivery_date:2023-03-18": {
+        "bias": -13.889410880464661,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 15.391673938179986,
+        "rmse": 20.390170750499774
+      },
+      "local_delivery_date:2023-03-19": {
+        "bias": -0.9763586928779233,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 4.780373699398882,
+        "rmse": 6.527140498155128
+      },
+      "local_delivery_date:2023-03-20": {
+        "bias": -1.7636493969735074,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 7.263141816488584,
+        "rmse": 9.841625637938964
+      },
+      "local_delivery_date:2023-03-21": {
+        "bias": 10.690459461269997,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 12.935925257612531,
+        "rmse": 16.375783340188963
+      },
+      "local_delivery_date:2023-03-22": {
+        "bias": 41.64558396759422,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 41.64558396759422,
+        "rmse": 47.47017448346774
+      },
+      "local_delivery_date:2023-03-23": {
+        "bias": 26.79232056347313,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 27.97360133122248,
+        "rmse": 31.266085440562225
+      },
+      "local_delivery_date:2023-03-24": {
+        "bias": 37.019172452465504,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 37.019172452465504,
+        "rmse": 40.82949086902178
+      },
+      "local_delivery_date:2023-03-25": {
+        "bias": 61.27249016077021,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 61.27249016077021,
+        "rmse": 62.51428933811781
+      },
+      "local_delivery_date:2023-03-26": {
+        "bias": -7.113574553720575,
+        "count": 23,
+        "duration_hours": 23.0,
+        "mae": 13.757910442415154,
+        "rmse": 15.384973538937055
+      },
+      "local_delivery_date:2023-03-27": {
+        "bias": 18.522512843943815,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 24.552444303587123,
+        "rmse": 29.550880166019294
+      },
+      "local_delivery_date:2023-03-28": {
+        "bias": -0.13837252957666735,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 12.421836318476835,
+        "rmse": 15.36816595067878
+      },
+      "local_delivery_date:2023-03-29": {
+        "bias": -0.6756375365541878,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 7.886159512544072,
+        "rmse": 10.308977292346999
+      },
+      "local_delivery_date:2023-03-30": {
+        "bias": 35.96078406368219,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 35.96078406368219,
+        "rmse": 44.693624589709216
+      },
+      "local_delivery_date:2023-03-31": {
+        "bias": -8.012076778015219,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 22.08161543071623,
+        "rmse": 25.832189050923333
+      },
+      "local_delivery_date:2023-04-01": {
+        "bias": 33.68406246111605,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 34.74814179976418,
+        "rmse": 39.40731096508276
+      },
+      "local_hour:0": {
+        "bias": 15.422307451216378,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.804814339098563,
+        "rmse": 38.615062478328866
+      },
+      "local_hour:1": {
+        "bias": 17.539456936334176,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 27.279849414655743,
+        "rmse": 37.06216921109628
+      },
+      "local_hour:10": {
+        "bias": 20.011821452913104,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 28.939864378045886,
+        "rmse": 37.6675905322126
+      },
+      "local_hour:11": {
+        "bias": 21.97393939813319,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.549219312058053,
+        "rmse": 39.43574390563055
+      },
+      "local_hour:12": {
+        "bias": 24.279554599918566,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.394712818964155,
+        "rmse": 41.588321814615924
+      },
+      "local_hour:13": {
+        "bias": 25.386375040052133,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 31.55071727732289,
+        "rmse": 44.778534262041994
+      },
+      "local_hour:14": {
+        "bias": 25.77173445994998,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.07110591340518,
+        "rmse": 46.42407476000827
+      },
+      "local_hour:15": {
+        "bias": 25.892946745892996,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 32.19286874514388,
+        "rmse": 45.47081736449091
+      },
+      "local_hour:16": {
+        "bias": 23.557657614271914,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 29.98703242025197,
+        "rmse": 42.258678321357145
+      },
+      "local_hour:17": {
+        "bias": 17.4501448702044,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 26.254451837948253,
+        "rmse": 34.72233437247194
+      },
+      "local_hour:18": {
+        "bias": 9.9394627415213,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 23.531011272328804,
+        "rmse": 28.699677860561053
+      },
+      "local_hour:19": {
+        "bias": 3.1634540747796387,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 21.423244082983345,
+        "rmse": 27.459667487366033
+      },
+      "local_hour:2": {
+        "bias": 19.9147743335547,
+        "count": 20,
+        "duration_hours": 20.0,
+        "mae": 29.185508297188324,
+        "rmse": 38.207139224641466
+      },
+      "local_hour:20": {
+        "bias": 5.907402589951765,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 21.476191742367394,
+        "rmse": 26.186316027034835
+      },
+      "local_hour:21": {
+        "bias": 10.74037088935311,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 23.147635417617046,
+        "rmse": 28.666258242471176
+      },
+      "local_hour:22": {
+        "bias": 12.182520851921428,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 24.577381590245608,
+        "rmse": 30.8430480939852
+      },
+      "local_hour:23": {
+        "bias": 14.256676895403976,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 25.37914570083952,
+        "rmse": 30.986328354217267
+      },
+      "local_hour:3": {
+        "bias": 20.357525839892972,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 27.350194034906096,
+        "rmse": 37.578362230799854
+      },
+      "local_hour:4": {
+        "bias": 20.786475508346136,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 27.755391412018618,
+        "rmse": 38.751663523096596
+      },
+      "local_hour:5": {
+        "bias": 19.736377521940447,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 27.599092011858158,
+        "rmse": 38.22106966882367
+      },
+      "local_hour:6": {
+        "bias": 16.221966063610825,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 27.074663719100165,
+        "rmse": 36.53820345300635
+      },
+      "local_hour:7": {
+        "bias": 11.597317660595351,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 25.073065701026085,
+        "rmse": 32.11428640384239
+      },
+      "local_hour:8": {
+        "bias": 12.584300496353833,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 25.590792283431238,
+        "rmse": 32.469399040627316
+      },
+      "local_hour:9": {
+        "bias": 16.557951622876736,
+        "count": 21,
+        "duration_hours": 21.0,
+        "mae": 26.370757605352328,
+        "rmse": 35.29567024194868
+      },
+      "month:2023-03": {
+        "bias": 16.29968800717835,
+        "count": 479,
+        "duration_hours": 479.0,
+        "mae": 26.807081474738567,
+        "rmse": 36.531757129962244
+      },
+      "month:2023-04": {
+        "bias": 33.68406246111605,
+        "count": 24,
+        "duration_hours": 24.0,
+        "mae": 34.74814179976418,
+        "rmse": 39.40731096508276
+      },
+      "negative_price": {
+        "bias": 69.00179171630981,
+        "count": 9,
+        "duration_hours": 9.0,
+        "mae": 69.00179171630981,
+        "rmse": 72.77313973893573
+      }
+    }
+  },
+  "common_intervals": 503,
+  "coverage": {
+    "previous_day": {
+      "duration_coverage_percent": 100.0,
+      "failures": 0,
+      "planned": 503,
+      "substituted_predictions": 1,
+      "successful": 503
+    },
+    "previous_week": {
+      "duration_coverage_percent": 100.0,
+      "failures": 0,
+      "planned": 503,
+      "substituted_predictions": 0,
+      "successful": 503
+    },
+    "ridge": {
+      "duration_coverage_percent": 100.0,
+      "failures": 0,
+      "planned": 503,
+      "substituted_predictions": 1,
+      "successful": 503
+    }
+  },
+  "evaluation_end": "2023-04-01",
+  "evaluation_start": "2023-03-12",
+  "experiment_id": "r1_hourly_2023_v1",
+  "high_price_threshold_eur_per_mwh": 203.313,
+  "metrics_eur_per_mwh": {
+    "previous_day": {
+      "bias": 2.18420261042441,
+      "count": 503,
+      "duration_hours": 503.0,
+      "mae": 28.695399775261475,
+      "rmse": 37.632580845438184
+    },
+    "previous_week": {
+      "bias": 11.02165009940358,
+      "count": 503,
+      "duration_hours": 503.0,
+      "mae": 41.537594433399605,
+      "rmse": 52.75118742503803
+    },
+    "ridge": {
+      "bias": 17.129161142157486,
+      "count": 503,
+      "duration_hours": 503.0,
+      "mae": 27.18597898527657,
+      "rmse": 36.674083145960154
+    }
+  },
+  "passed": true,
+  "ridge_skill_against_reference": 0.052601490197261125,
+  "selected_alpha": 100.0,
+  "selected_reference": "previous_day",
+  "training_rows": 1512
+}

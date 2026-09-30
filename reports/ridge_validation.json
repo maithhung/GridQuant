@@ -1,0 +1,120 @@
+{
+  "experiment_id": "r1_hourly_2023_v1",
+  "blocks": [
+    {
+      "alpha": 0.1,
+      "block": 1,
+      "training_end": "2023-02-18",
+      "validation_start": "2023-02-19",
+      "validation_end": "2023-02-25",
+      "predictions": 168,
+      "mae_eur_per_mwh": 32.55826804368091
+    },
+    {
+      "alpha": 0.1,
+      "block": 2,
+      "training_end": "2023-02-25",
+      "validation_start": "2023-02-26",
+      "validation_end": "2023-03-04",
+      "predictions": 168,
+      "mae_eur_per_mwh": 13.835129362842443
+    },
+    {
+      "alpha": 0.1,
+      "block": 3,
+      "training_end": "2023-03-04",
+      "validation_start": "2023-03-05",
+      "validation_end": "2023-03-11",
+      "predictions": 168,
+      "mae_eur_per_mwh": 19.71717246824828
+    },
+    {
+      "alpha": 1.0,
+      "block": 1,
+      "training_end": "2023-02-18",
+      "validation_start": "2023-02-19",
+      "validation_end": "2023-02-25",
+      "predictions": 168,
+      "mae_eur_per_mwh": 32.49434389684678
+    },
+    {
+      "alpha": 1.0,
+      "block": 2,
+      "training_end": "2023-02-25",
+      "validation_start": "2023-02-26",
+      "validation_end": "2023-03-04",
+      "predictions": 168,
+      "mae_eur_per_mwh": 13.82847464987012
+    },
+    {
+      "alpha": 1.0,
+      "block": 3,
+      "training_end": "2023-03-04",
+      "validation_start": "2023-03-05",
+      "validation_end": "2023-03-11",
+      "predictions": 168,
+      "mae_eur_per_mwh": 19.6792183165288
+    },
+    {
+      "alpha": 10.0,
+      "block": 1,
+      "training_end": "2023-02-18",
+      "validation_start": "2023-02-19",
+      "validation_end": "2023-02-25",
+      "predictions": 168,
+      "mae_eur_per_mwh": 31.93348612096124
+    },
+    {
+      "alpha": 10.0,
+      "block": 2,
+      "training_end": "2023-02-25",
+      "validation_start": "2023-02-26",
+      "validation_end": "2023-03-04",
+      "predictions": 168,
+      "mae_eur_per_mwh": 13.838489234402884
+    },
+    {
+      "alpha": 10.0,
+      "block": 3,
+      "training_end": "2023-03-04",
+      "validation_start": "2023-03-05",
+      "validation_end": "2023-03-11",
+      "predictions": 168,
+      "mae_eur_per_mwh": 19.509088246519095
+    },
+    {
+      "alpha": 100.0,
+      "block": 1,
+      "training_end": "2023-02-18",
+      "validation_start": "2023-02-19",
+      "validation_end": "2023-02-25",
+      "predictions": 168,
+      "mae_eur_per_mwh": 29.009479755238203
+    },
+    {
+      "alpha": 100.0,
+      "block": 2,
+      "training_end": "2023-02-25",
+      "validation_start": "2023-02-26",
+      "validation_end": "2023-03-04",
+      "predictions": 168,
+      "mae_eur_per_mwh": 14.602137317545498
+    },
+    {
+      "alpha": 100.0,
+      "block": 3,
+      "training_end": "2023-03-04",
+      "validation_start": "2023-03-05",
+      "validation_end": "2023-03-11",
+      "predictions": 168,
+      "mae_eur_per_mwh": 19.15406876263714
+    }
+  ],
+  "pooled_mae_by_alpha": {
+    "0.1": 22.036856624923878,
+    "1.0": 22.000678954415232,
+    "10.0": 21.760354533961078,
+    "100.0": 20.921895278473613
+  },
+  "selected_alpha": 100.0
+}

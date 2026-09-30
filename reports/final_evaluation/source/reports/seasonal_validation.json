@@ -1,0 +1,19 @@
+{
+  "experiment_id": "r1_hourly_2023_v1",
+  "validation_start": "2023-02-19",
+  "validation_end": "2023-03-11",
+  "mae_eur_per_mwh": {
+    "previous_day": 25.662718253968254,
+    "previous_week": 27.1063888888889
+  },
+  "prediction_counts": {
+    "previous_day": 504,
+    "previous_week": 504
+  },
+  "substitution_counts": {
+    "previous_day": 0,
+    "previous_week": 0
+  },
+  "selected_reference": "previous_day",
+  "selection_rule": "Prefer previous_day within 1% of best; exact ties at zero."
+}

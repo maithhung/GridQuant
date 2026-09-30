@@ -5,15 +5,10 @@ Experiment: r1_hourly_2023_v1
 Freeze date: 2026-09-30
 
 Matching configuration: `configs/r1.yaml` (paths are relative to the project root).
-This document defines the experiment. Seasonal/Ridge models, validation scripts,
-and a frozen-config final evaluation runner are implemented. The final run archives
-the exact source, configuration, and selection reports with hashes; it records
-the Git revision and dirty state rather than claiming a clean release.
-A changed rule or snapshot requires a new experiment identifier and record.
-
-Execution record (2026-09-30): validation selected alpha 100 and previous-day;
-final evaluation is now inspected. See `reports/final_evaluation/report.md`.
-The experiment rules below were not retuned after final scoring.
+This document defines the experiment. Seasonal baselines and the single-alpha
+Ridge pipeline are implemented; config loading and validation selection remain
+planned. Preserve both files in version control before the first
+fit. A changed rule or snapshot requires a new experiment identifier and record.
 
 ## Question
 

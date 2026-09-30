@@ -1,0 +1,919 @@
+{
+  "daily_reports": [
+    {
+      "delivery_date": "2023-01-01",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-02",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-03",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-04",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-05",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-06",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-07",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-08",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-09",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-10",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-11",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-12",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-13",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-14",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-15",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-16",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-17",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-18",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-19",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-20",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-21",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-22",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-23",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-24",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-25",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-26",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-27",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-28",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-29",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-30",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-01-31",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-01",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-02",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-03",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-04",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-05",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-06",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-07",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-08",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-09",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-10",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-11",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-12",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-13",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-14",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-15",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-16",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-17",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-18",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-19",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-20",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-21",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-22",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-23",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-24",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-25",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-26",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-27",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-02-28",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-01",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-02",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-03",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-04",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-05",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-06",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-07",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-08",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-09",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-10",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-11",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-12",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-13",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-14",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-15",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-16",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-17",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-18",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-19",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-20",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-21",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-22",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-23",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-24",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-25",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-26",
+      "duplicate_starts": [],
+      "expected_count": 23,
+      "interval_minutes": 60,
+      "matched_count": 23,
+      "missing_starts": [],
+      "observed_count": 23,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-27",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-28",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-29",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-30",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-03-31",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    },
+    {
+      "delivery_date": "2023-04-01",
+      "duplicate_starts": [],
+      "expected_count": 24,
+      "interval_minutes": 60,
+      "matched_count": 24,
+      "missing_starts": [],
+      "observed_count": 24,
+      "unexpected_starts": []
+    }
+  ],
+  "end_date": "2023-04-01",
+  "expected_count": 2183,
+  "issues": [],
+  "observed_count": 2183,
+  "start_date": "2023-01-01"
+}

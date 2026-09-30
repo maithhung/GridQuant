@@ -1,0 +1,57 @@
+{
+  "created_at_utc": "2026-09-30T05:14:49.217040+00:00",
+  "elapsed_seconds": 1.4062841999984812,
+  "experiment_id": "r1_hourly_2023_v1",
+  "git_dirty": true,
+  "git_revision": "fc7cdc408ac7a18275bf27b93789ac8b794f4f21",
+  "input_sha256": {
+    "data\\processed\\energy_charts\\DE-LU\\2023-01-01_2023-04-01.parquet": "9d67b2a91539175691ae312ce5e618d82aaffcd3e9b384ccac846f9ccdd1a280",
+    "data\\raw\\energy_charts\\DE-LU\\2023-01-01_2023-04-01.json": "3785530a824163552be3d646d2c70f43bd08beb70e8e077c5e58ead4c88896f7"
+  },
+  "output_sha256": {
+    "metrics.json": "953de045e4e85156476cfa51095b4cc3018828e8743e2ccd22caf9313e7cf779",
+    "model.json": "872dc885e747c962f50eadbe30a9ed5852cde300c4c3271c057fff7ad8a46375",
+    "predictions.json": "b6c15e23aa856275f46482ada636f44cc11253568f52194045b5f36dcf274529",
+    "quality.json": "0c15519e5f729c1be04582f4ac316da2db26453d356b748cc29393355262811e",
+    "report.md": "1338cbb472084981b01d6f416e1deb1b060fb9ac24bd4857f5246c2e462acf1d",
+    "resolved_config.json": "07fc6f5dc071a4c4d4df4c4d097811d3e71b37cb78efc887d27edcf406407dc6"
+  },
+  "packages": {
+    "numpy": "2.5.3",
+    "pyarrow": "25.0.1",
+    "pyyaml": "6.0.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.3",
+  "selection_evidence_limitation": "Validation reports originally omitted source/config hashes; their archived bytes are preserved here.",
+  "source_archive_sha256": {
+    "configs/r1.yaml": "2c855c42400b08ea547d1ea18f483443385680eaf9939b766bb34f3dbb156d73",
+    "docs/r1_protocol.md": "c2f4850523364c86e54b8a514f56543a44172233b5e2b0f86784e89c99ffee3d",
+    "final_evaluation.py": "f4bfdb3a5456a79345ca0df626602c17239e8f449a7dcc52574511e567617c02",
+    "pyproject.toml": "dba1169b7085977df914010468053594c34216b9d5915783d4da3f5d86ae1d47",
+    "reports/ridge_validation.json": "0c4ca7062ad5fcfd6671b410f7958b326a1676a75021cd29156045d48a21ef20",
+    "reports/seasonal_validation.json": "efb3fe7ce15af36a55e3de3e5e71b3bd991492ed7a147a768fba23b5e34a5546",
+    "ridge_validation.py": "3db99873f2da3a1458d84d9816784ba75f362b119f6fb18f583871aac972c289",
+    "seasonal_validation.py": "635c6a983380e90d9a70f8ce2466a9d4f4f24573b8bd45eadc63217c3b7053da",
+    "src/gridquant/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/gridquant/cli.py": "76fd282679c0eecc3febb4fec9f539828af4aaafcf09c2c1ed8c393536e20057",
+    "src/gridquant/collectors/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/gridquant/collectors/energy_charts.py": "0cf0c13654d2ad3b2b3d7789557faf6c01e63bfb81bf772ced64f57794393a75",
+    "src/gridquant/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/gridquant/data/models.py": "31b311b9c8b1e0226d79599fc479aaa1dc7fb509578c968dd053499703129500",
+    "src/gridquant/data/normalized.py": "00c090bea78daa7d5117f98939f70c04e3a206466c442eafd8e59f7e219eaaa9",
+    "src/gridquant/data/period_quality.py": "839de8d2edf4ef595289c8b8c468d14026f72c283e225fe3511ae14c3f6a7cc7",
+    "src/gridquant/data/quality.py": "c82b20746484fdfbcf112333de3131e35489470fe4dbc676ddcd99ececc10177",
+    "src/gridquant/data/reporting.py": "8c9e5cabe8e41706339323b1297d0b473f12956dffef8e18f9b75867b71972f1",
+    "src/gridquant/data/storage.py": "ed1c167e2fa82d8a18b671e4fa12983af1f841e318acfcfe83fa32e2b6dc25dc",
+    "src/gridquant/evaluation.py": "79150b10581d65b2fa103965749bd552bd1e63e7e360e6ee81f5b4cb0e0a9797",
+    "src/gridquant/logging.py": "5fec3bde88529d4ab8cb3ff0921e068c3350c35299f2c79e2bad0a5482ced854",
+    "src/gridquant/merit_order.py": "8abd4e55eae6d90f263d2ba8a7fbed3375c08d5f0f312d1864a7573d2a57e683",
+    "src/gridquant/models/__init__.py": "33b058f347e47bd7533ac12073c6b7979f3b3794df22be687d3ce6a16f42635f",
+    "src/gridquant/models/ridge.py": "135e02c68105bf2def577317ca937c6b4be44b2db1f533bd993667920d8382e2",
+    "src/gridquant/models/seasonal.py": "8e3ca798e36f6f5cf799499647d1839f7400acfe772b20193a09d6afc6a0a13d",
+    "uv.lock": "40dceb96e5318ca225478ab973f1427f61e31733fd848163a42f11d841fd0f64"
+  }
+}

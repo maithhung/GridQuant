@@ -6,8 +6,10 @@ GridQuant is an early-stage Python toolkit for electricity-market research.
 The current implementation provides an installable package, CLI help and
 version output, a pure-Python merit-order calculator, and a basic Energy-Charts
 price collector with JSON parsing, typed datasets, Parquet storage, and
-JSON/Markdown interval-start coverage reports. Broader simulation,
-forecasting, and backtesting are planned.
+JSON/Markdown interval-start coverage reports. Hourly previous-day and
+previous-week forecasting baselines and a Ridge pipeline are implemented.
+Validation selection and a frozen R1 final evaluation are implemented.
+Broader simulation and backtesting remain planned.
 
 ## Setup
 
@@ -124,9 +126,140 @@ the functions for hourly data, pass an expected interval length of 60 minutes.
 Session 4 is complete for its agreed learning scope. Historical publication and
 revision availability remain unverified; no availability filter is implemented.
 Session 5 will use a latest-vintage historical benchmark unless additional
-evidence supports stronger claims. A contiguous development dataset and a frozen
-evaluation protocol are still needed before training; the four samples alone
-are insufficient. See the [availability decision](docs/data_sources.md).
+evidence supports stronger claims. The contiguous 2023 development snapshot and
+[R1 protocol](docs/r1_protocol.md) now define the seasonal-model experiment.
+See the [availability decision](docs/data_sources.md) for its evidence limits.
+
+## Seasonal price forecasts
+
+Use a saved hourly dataset to forecast a complete Berlin delivery day:
+
+```python
+from datetime import date
+from pathlib import Path
+
+from gridquant.data.normalized import load_dataset
+from gridquant.models.seasonal import forecast_seasonal
+
+dataset = load_dataset(
+    Path("data/processed/energy_charts/DE-LU/2023-01-01_2023-04-01.parquet")
+)
+previous_day = forecast_seasonal(dataset, date(2023, 2, 19), lag_days=1)
+previous_week = forecast_seasonal(dataset, date(2023, 2, 19), lag_days=7)
+print(previous_day[0])
+```
+
+Targets are generated from the calendar, so target-day prices are not needed.
+Each `SeasonalPrediction` records the UTC origin and target interval, local hour
+and repeated-hour occurrence, prediction, source day/UTC starts, source document
+and hash, substitution, and failure reason. These aligned predictions can also
+supply Ridge's two lag features. No model fitting or file writing occurs here.
+
+Forecast issuance is 11:00 Berlin on D-1. Under the frozen latest-vintage
+assumption, the complete D-1 price curve is usable, including its later hours.
+Historical publication availability is not verified. Only lag days 1 and 7 are
+supported; invalid arguments and naive input timestamps raise exceptions.
+
+The source day must pass hourly validation, including its complete 23/24/25-hour
+calendar, chronological order, durations, zone, and finite prices. Missing or
+invalid curves return a failed prediction for every target instead of dropping
+rows. A missing repeated-hour occurrence uses the available same-hour occurrence;
+an hour absent because of spring DST uses the complete source-day mean. Both
+substitutions are flagged, and mean predictions list every contributing start.
+
+## Ridge price forecasts
+
+Ridge reuses seasonal alignment for its two price lags and adds local hour,
+weekday, and repeated-hour occurrence. Fit a single protocol alpha, then predict
+a later day:
+
+```python
+from datetime import date
+
+from gridquant.models.ridge import fit_ridge, forecast_ridge
+
+# dataset is the saved PriceDataset loaded in the seasonal example above.
+model = fit_ridge(dataset, date(2023, 1, 8), date(2023, 2, 18), alpha=1.0)
+predictions = forecast_ridge(model, dataset, date(2023, 2, 19))
+```
+
+This example uses alpha 1.0 as a smoke check, not a validation-selected value.
+`build_ridge_features(dataset, delivery_date)` exposes the same inputs and lag
+provenance without attaching actual target prices. Training validates complete
+hourly target days and fails on missing lag inputs. Prediction retains a failure
+record for each target with invalid source data. Target prices are never needed
+for prediction; the forecast day must be later than the last training target day.
+
+The scikit-learn pipeline fits `StandardScaler` on the two training price columns
+and fixed-category one-hot encoding on the calendar columns, followed by Ridge
+with an intercept and deterministic SVD solver. Forecasting never refits this
+pipeline. Supported alphas are 0.1, 1, 10, and 100. The fitted model records
+training dates, row count, alpha, and source identity; predictions retain both
+seasonal dependencies and their substitution flags. Historical availability
+remains assumed. The validation scripts select parameters; the final evaluation
+runner below verifies those saved choices and never tunes on final scores.
+
+## Frozen final evaluation
+
+```sh
+uv run python final_evaluation.py
+```
+
+`final_evaluation.py` is now a thin argument-parsing/display wrapper around
+`gridquant.demo.run_demo`. The reusable function accepts explicit paths and
+returns a `DemoResult` with `output_dir` and `summary`, without printing:
+
+```python
+from pathlib import Path
+
+from gridquant.demo import run_demo
+
+result = run_demo(
+    input_dir=Path("demo_inputs"),
+    output_dir=Path("outputs/demo"),
+    offline=True,
+)
+print(result.summary["metrics_eur_per_mwh"])
+```
+
+At this stage the input folder must preserve the existing relative layout:
+`configs/r1.yaml`, the two `reports/*_validation.json` files, and the raw JSON
+and Parquet at the paths named by the config. The repository itself can serve
+as `input_dir`. A distributable input bundle and merit-order integration remain
+the next steps; this function currently reproduces the forecasting workflow.
+Only offline mode is supported. Missing input fails without a download, and
+configured data paths must stay inside the supplied directory.
+
+The wrapper accepts `--input-dir`, `--output`, and `--offline`, for example:
+
+```sh
+uv run python final_evaluation.py --input-dir demo_inputs --output outputs/demo --offline
+```
+
+Source preservation uses the executing package's Python files. Config/selection
+files are archived from the supplied inputs; optional repository documents are
+included when present. Git metadata is recorded when available and remains null
+otherwise. Reproduction does not require the input bundle to be a Git checkout.
+
+The runner checks the frozen `configs/r1.yaml`, dataset hashes, quality, and saved
+validation choices. It refits Ridge once on January 8-March 11 with selected alpha
+100, then scores all three models on March 12-April 1. It writes predictions,
+MAE/RMSE/bias, coverage, DST substitutions, daily/month/hour/event breakdowns,
+fitted parameters, a Markdown report, and a manifest with an exact source snapshot.
+It uses saved data without downloading. High-price events use the initial training
+95th percentile, not evaluation data.
+
+The existing run is in [reports/final_evaluation/report.md](reports/final_evaluation/report.md).
+All models produced 503/503 predictions. Ridge MAE is 27.185979 EUR/MWh versus
+28.695400 for previous-day and 41.537594 for previous-week. Ridge's MAE reduction
+against the frozen reference is 5.26%, but its positive bias is 17.129161 EUR/MWh.
+This is a short descriptive latest-vintage result, not evidence of general superiority.
+
+Existing output directories are never overwritten. For an intentional reproduction,
+use `--output reports/final_evaluation_replay`; keep model choices fixed. Prediction
+failures are saved and make the run exit unsuccessfully. Original validation reports
+lacked snapshot hashes; the final manifest preserves their bytes together with the
+current verified inputs, rather than claiming those hashes were recorded earlier.
 
 ## Development
 
@@ -137,9 +270,18 @@ uv run mypy src
 uv run python -m pytest
 ```
 
-Session 5 Step 1 verification (2026-09-30): 96 tests pass, mypy passes all
-12 source files, and Ruff lint and formatting pass. Tests exercise the installed
-CLI in fresh processes, quiet imports, and diagnostics on stderr. A fresh wheel
+Workflow-extraction verification (2026-09-30): 155 tests pass, mypy passes all
+18 source files, and Ruff lint and formatting pass. Tests cover seasonal
+alignment, DST substitutions, invalid curves, provenance, training-only scaling,
+constant features, target/future-price leakage, hand-calculated weighted metrics,
+selection/config validation, and overwrite protection. A relocated minimal input
+bundle reproduced metrics, predictions, fitted parameters, quality, and report
+exactly with HTTP blocked, a different working directory, and Git unavailable.
+The original final run was preserved. Final evaluation used one
+fit on 1,512 rows and 503 target intervals per model. NumPy 2.5.3,
+SciPy 1.18.1, and scikit-learn 1.9.1 are installed in the Python 3.14 environment.
+Initial numerical-library imports were slow; routine checks now complete normally.
+A fresh wheel
 installation outside the repository remains a later release check; this is not
 an R1 release.
 
@@ -163,6 +305,10 @@ src/gridquant/
     data/quality.py  One-day Berlin interval-start coverage
     data/normalized.py  Parquet save/load with embedded provenance
     data/reporting.py  JSON and Markdown coverage reports
+    models/seasonal.py  Previous-day/week forecasts with shared lag alignment
+    models/ridge.py  Shared features, training-only Ridge pipeline, daily forecasts
+    evaluation.py  Duration-weighted MAE, RMSE, bias, and reference skill
+    demo.py  Reusable offline forecasting workflow with explicit input/output paths
 tests/
     test_cli.py     Fresh-process help/version, quiet imports, stderr diagnostics
     test_merit_order.py  Calculator and output-unit tests
@@ -171,7 +317,12 @@ tests/
     test_storage.py  Manifest and storage tests
     test_quality.py  Coverage and DST tests
     test_normalized_reporting.py  Storage round trips and report tests
+    test_seasonal.py  Seasonal alignment, DST, failures, and leakage
+    test_ridge.py  Preprocessing, temporal boundaries, failures, and leakage
+    test_evaluation.py  Independent weighted-metric hand calculations
+    test_final_evaluation.py  Frozen settings, selections, overwrite protection
 json_practice.py    Fetch/cache/parse, Parquet, and reporting demonstration
+final_evaluation.py  Argument parsing and display for the reusable workflow
 docs/data_sources.md  Source contract and attribution
 docs/data_contract.md  Implemented dataset, storage, and reporting contract
 pyproject.toml      Package metadata and development tools
