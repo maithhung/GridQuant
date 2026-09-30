@@ -1,0 +1,28 @@
+{
+  "availability_evidence": "unknown",
+  "calendar_timezone": "Europe/Berlin",
+  "expected_interval_minutes": 60,
+  "passed": true,
+  "quality": {
+    "daily_reports": [
+      {
+        "delivery_date": "2023-03-26",
+        "duplicate_starts": [],
+        "expected_count": 23,
+        "interval_minutes": 60,
+        "matched_count": 23,
+        "missing_starts": [],
+        "observed_count": 23,
+        "unexpected_starts": []
+      }
+    ],
+    "end_date": "2023-03-26",
+    "expected_count": 23,
+    "issues": [],
+    "observed_count": 23,
+    "start_date": "2023-03-26"
+  },
+  "raw_sha256": "d53abe808b52424ba5a710b95cf0814408f66525c678311ab35410ccde55a941",
+  "report_schema_version": 1,
+  "source_document_id": "data/raw/energy_charts/DE-LU/2023-03-26_2023-03-26.json"
+}
