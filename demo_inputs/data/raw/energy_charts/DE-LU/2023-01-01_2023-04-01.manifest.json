@@ -1,0 +1,12 @@
+{
+  "source": "Energy-Charts",
+  "endpoint": "https://api.energy-charts.info/v2/price",
+  "parameters": {
+    "bzn": "DE-LU",
+    "start": "2023-01-01",
+    "end": "2023-04-01"
+  },
+  "retrieved_at_utc": "2026-09-30T03:32:09.912453+00:00",
+  "raw_sha256": "3785530a824163552be3d646d2c70f43bd08beb70e8e077c5e58ead4c88896f7",
+  "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "name": "negative_price",
+  "description": "Synthetic example demonstrating negative offers and uniform marginal pricing.",
+  "demand_mw": 80.0,
+  "duration_hours": 1.0,
+  "generators": [
+    {
+      "name": "Wind",
+      "capacity_mw": 50.0,
+      "marginal_cost_per_mwh": -20.0
+    },
+    {
+      "name": "Solar",
+      "capacity_mw": 20.0,
+      "marginal_cost_per_mwh": -5.0
+    },
+    {
+      "name": "Gas",
+      "capacity_mw": 100.0,
+      "marginal_cost_per_mwh": 60.0
+    }
+  ]
+}

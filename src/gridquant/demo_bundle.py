@@ -72,11 +72,24 @@ def prepare_bundle(*, source_dir: Path, output_dir: Path) -> Path:
     raw_manifest = verify_raw_manifest(source_dir, config)
     manifest = json.loads(raw_manifest.read_text(encoding="utf-8"))
     names = [
-        "configs/r1.yaml", config["data"]["raw_path"],
-        raw_manifest.relative_to(source_dir).as_posix(), config["data"]["processed_path"],
-        config["data"]["quality_report_path"], "reports/ridge_validation.json",
-        "reports/seasonal_validation.json", "docs/r1_protocol.md", "docs/data_sources.md",
-        "docs/data_contract.md", "pyproject.toml", "uv.lock",
+        "configs/r1.yaml",
+        config["data"]["raw_path"],
+        raw_manifest.relative_to(source_dir).as_posix(),
+        config["data"]["processed_path"],
+        config["data"]["quality_report_path"],
+        "reports/ridge_validation.json",
+        "reports/seasonal_validation.json",
+        "docs/r1_protocol.md",
+        "docs/data_sources.md",
+        "docs/data_contract.md",
+
+        # Synthetic merit-order demonstration inputs
+        "examples/merit_order/basic.json",
+        "examples/merit_order/negative_price.json",
+        "examples/merit_order/shortage.json",
+
+        "pyproject.toml",
+        "uv.lock",
     ]
     # Preflight every file before creating a partial output directory.
     payloads = {name: local_file(source_dir, name).read_bytes() for name in names}

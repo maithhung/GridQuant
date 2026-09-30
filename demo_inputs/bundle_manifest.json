@@ -1,0 +1,78 @@
+{
+  "bundle_schema_version": 1,
+  "experiment_id": "r1_hourly_2023_v1",
+  "files": {
+    "ATTRIBUTION.md": {
+      "bytes": 996,
+      "sha256": "51c5ae131802ccc99bbc8772ee1c3446013691d87eb671a2915cadb176db6342"
+    },
+    "README.md": {
+      "bytes": 1085,
+      "sha256": "750dccc55917508559678a99da2eceb112767a919fe3d13c9bd91e80d6cbe9e3"
+    },
+    "configs/r1.yaml": {
+      "bytes": 2497,
+      "sha256": "2c855c42400b08ea547d1ea18f483443385680eaf9939b766bb34f3dbb156d73"
+    },
+    "data/processed/energy_charts/DE-LU/2023-01-01_2023-04-01.parquet": {
+      "bytes": 51565,
+      "sha256": "9d67b2a91539175691ae312ce5e618d82aaffcd3e9b384ccac846f9ccdd1a280"
+    },
+    "data/raw/energy_charts/DE-LU/2023-01-01_2023-04-01.json": {
+      "bytes": 169641,
+      "sha256": "3785530a824163552be3d646d2c70f43bd08beb70e8e077c5e58ead4c88896f7"
+    },
+    "data/raw/energy_charts/DE-LU/2023-01-01_2023-04-01.manifest.json": {
+      "bytes": 433,
+      "sha256": "c49d342a260f4460a80101e86f478d2757551b6b93b6c409e2b55b92abc49e43"
+    },
+    "docs/data_contract.md": {
+      "bytes": 5996,
+      "sha256": "506466376fdfa819d0755d1238f9a855ed1cbdb14a115baabacc2d2eaf7a14df"
+    },
+    "docs/data_sources.md": {
+      "bytes": 6336,
+      "sha256": "eeb2cbe276c45e338ba4913708b2b47405d21b39ab474c5b435816b2bb9f5be8"
+    },
+    "docs/r1_protocol.md": {
+      "bytes": 8812,
+      "sha256": "9979bd7408ef4dd1aab25b30c22b804cc21b79f81fb1eaeccf4426f941c9df59"
+    },
+    "examples/merit_order/basic.json": {
+      "bytes": 431,
+      "sha256": "bc72c669135d914ca687bdd1a758bfb377e13ae9728b51de54b90d87a47833ee"
+    },
+    "examples/merit_order/negative_price.json": {
+      "bytes": 538,
+      "sha256": "943d3b7cc41b5cb7084a4e04053d8375b4f35c34656588d0f56fa759858eafcf"
+    },
+    "examples/merit_order/shortage.json": {
+      "bytes": 422,
+      "sha256": "6db8023dd8b698687fbfdd361158af66728d77b2ba7a65fa3e40d713a23b4485"
+    },
+    "expected/forecast_metrics.json": {
+      "bytes": 30392,
+      "sha256": "953de045e4e85156476cfa51095b4cc3018828e8743e2ccd22caf9313e7cf779"
+    },
+    "pyproject.toml": {
+      "bytes": 740,
+      "sha256": "dba1169b7085977df914010468053594c34216b9d5915783d4da3f5d86ae1d47"
+    },
+    "reports/quality/DE-LU/2023-01-01_2023-04-01.period.json": {
+      "bytes": 25176,
+      "sha256": "98de5cd1943741dfb7433cd29c422e8d894a2206e0ac745d0accd17530f7c9a5"
+    },
+    "reports/ridge_validation.json": {
+      "bytes": 3187,
+      "sha256": "0c4ca7062ad5fcfd6671b410f7958b326a1676a75021cd29156045d48a21ef20"
+    },
+    "reports/seasonal_validation.json": {
+      "bytes": 518,
+      "sha256": "efb3fe7ce15af36a55e3de3e5e71b3bd991492ed7a147a768fba23b5e34a5546"
+    },
+    "uv.lock": {
+      "bytes": 117931,
+      "sha256": "40dceb96e5318ca225478ab973f1427f61e31733fd848163a42f11d841fd0f64"
+    }
+  }
+}

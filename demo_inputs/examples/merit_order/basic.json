@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "name": "basic_partial_dispatch",
+  "description": "Two-generator example with partial dispatch of the marginal generator.",
+  "demand_mw": 120.0,
+  "duration_hours": 0.25,
+  "generators": [
+    {
+      "name": "A",
+      "capacity_mw": 50.0,
+      "marginal_cost_per_mwh": 10.0
+    },
+    {
+      "name": "B",
+      "capacity_mw": 100.0,
+      "marginal_cost_per_mwh": 40.0
+    }
+  ]
+}

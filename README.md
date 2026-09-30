@@ -2,14 +2,8 @@
 
 Reproducible short-term electricity market simulation and forecasting.
 
-GridQuant is an early-stage Python toolkit for electricity-market research.
-The current implementation provides an installable package, CLI help and
-version output, a pure-Python merit-order calculator, and a basic Energy-Charts
-price collector with JSON parsing, typed datasets, Parquet storage, and
-JSON/Markdown interval-start coverage reports. Hourly previous-day and
-previous-week forecasting baselines and a Ridge pipeline are implemented.
-Validation selection and a frozen R1 final evaluation are implemented.
-Broader simulation and backtesting remain planned.
+GridQuant is an early-stage Python toolkit for reproducible electricity-market research. The current implementation provides an installable package, CLI help and version output, a pure-Python merit-order calculator with reproducible synthetic example scenarios, and an Energy-Charts price-data pipeline with JSON parsing, typed datasets, Parquet storage, and coverage reporting. Hourly seasonal forecasting baselines, a Ridge forecasting pipeline, validation selection, and a frozen R1 final evaluation are also implemented. Broader market simulation and backtesting remain planned.
+
 
 ## Setup
 
@@ -54,6 +48,50 @@ Power does not scale with duration; energy and operating profit do. During a
 shortage, the highest marginal cost among dispatched generators sets the model
 price, and unmet demand is reported. With no dispatch, price is `None`; profits
 are zero for zero demand and `None` for positive unmet demand.
+
+### Merit-order example inputs
+
+Three synthetic merit-order scenarios are provided under `examples/merit_order/`:
+
+* `basic.json` — normal market clearing with partial dispatch of the marginal generator.
+* `negative_price.json` — demonstrates that negative marginal-cost offers are supported.
+* `shortage.json` — demonstrates insufficient available capacity and explicit unmet demand.
+
+These files contain only synthetic generator offers, demand, and delivery-period duration. They are intended as reproducible inputs for the pure-Python merit-order calculator.
+
+Example:
+
+```python
+from pathlib import Path
+
+from gridquant.merit_order import clear_market
+from gridquant.merit_order_io import load_merit_order_case
+
+case = load_merit_order_case(
+    Path("examples/merit_order/basic.json")
+)
+
+result = clear_market(
+    case.generators,
+    demand_mw=case.demand_mw,
+    duration_hours=case.duration_hours,
+)
+
+print(result.dispatch_mw)
+print(result.clearing_price_per_mwh)
+```
+
+The `basic.json` case corresponds to the worked example above:
+
+```text
+dispatch_mw = {"A": 50.0, "B": 70.0}
+cleared_volume_mw = 120.0
+cleared_energy_mwh = 30.0
+clearing_price_per_mwh = 40.0
+operating_profit_eur = {"A": 375.0, "B": 0.0}
+```
+
+The JSON examples are also included in the generated demo input bundle so that the market-clearing examples can be reproduced without depending on files outside the bundle.
 
 
 ## Electricity-price example
@@ -327,4 +365,43 @@ docs/data_sources.md  Source contract and attribution
 docs/data_contract.md  Implemented dataset, storage, and reporting contract
 pyproject.toml      Package metadata and development tools
 uv.lock            Locked dependencies
+```
+## Reproducible demo input bundle
+
+Create the frozen demo input bundle from the repository root:
+
+```bash
+uv run python prepare_demo_inputs.py
+```
+
+The command validates the configured inputs and creates `demo_inputs/` containing the files required for the reproducible forecasting and merit-order demonstrations.
+
+The bundle includes, among other files:
+
+```text
+demo_inputs/
+├── configs/
+│   └── r1.yaml
+├── data/
+├── reports/
+├── docs/
+├── examples/
+│   └── merit_order/
+│       ├── basic.json
+│       ├── negative_price.json
+│       └── shortage.json
+├── expected/
+├── pyproject.toml
+├── uv.lock
+└── bundle_manifest.json
+```
+
+The merit-order files are synthetic demonstration inputs. The forecasting data retain their original source attribution and provenance information.
+
+`bundle_manifest.json` records the packaged files and their hashes, allowing the prepared bundle to be checked for unexpected changes.
+
+The bundle is generated rather than maintained manually. To rebuild it after changing one of the packaged inputs, remove the existing `demo_inputs/` directory and rerun:
+
+```bash
+uv run python prepare_demo_inputs.py
 ```

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "name": "capacity_shortage",
+  "description": "Synthetic example where available generation cannot satisfy demand.",
+  "demand_mw": 200.0,
+  "duration_hours": 1.0,
+  "generators": [
+    {
+      "name": "A",
+      "capacity_mw": 50.0,
+      "marginal_cost_per_mwh": 10.0
+    },
+    {
+      "name": "B",
+      "capacity_mw": 100.0,
+      "marginal_cost_per_mwh": 40.0
+    }
+  ]
+}

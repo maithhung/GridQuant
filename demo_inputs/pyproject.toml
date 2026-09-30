@@ -1,0 +1,36 @@
+[project]
+name = "gridquant"
+version = "0.1.0"
+description = "Electricity-market research toolkit with merit-order simulation and price-data validation."
+readme = "README.md"
+authors = [
+    { name = "maithanhhung5", email = "thanh.h.mai@campus.tu-berlin.de" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.5.3",
+    "pyarrow>=25.0.1",
+    "pyyaml>=6.0.3",
+    "scikit-learn>=1.9.1",
+    "typer>=0.27.2",
+    "tzdata>=2026.4",
+]
+
+[project.scripts]
+gridquant = "gridquant.cli:app"
+
+[build-system]
+requires = ["uv_build>=0.10.12,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "build>=1.6.1",
+    "mypy>=2.3.1",
+    "pytest>=9.1.1",
+    "ruff>=0.16.7",
+]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true

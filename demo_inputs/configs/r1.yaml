@@ -1,0 +1,74 @@
+schema_version: 1
+experiment_id: r1_hourly_2023_v1
+
+data:
+  zone: DE-LU
+  series: day_ahead_price
+  unit: EUR/MWh
+  timezone: Europe/Berlin
+  interval_minutes: 60
+  evidence_track: latest_vintage
+  raw_path: data/raw/energy_charts/DE-LU/2023-01-01_2023-04-01.json
+  raw_sha256: "3785530A824163552BE3D646D2C70F43BD08BEB70E8E077C5E58EAD4C88896F7"
+  processed_path: data/processed/energy_charts/DE-LU/2023-01-01_2023-04-01.parquet
+  processed_sha256: "9D67B2A91539175691AE312CE5E618D82AAFFCD3E9B384CCAC846F9CCDD1A280"
+  quality_report_path: reports/quality/DE-LU/2023-01-01_2023-04-01.period.json
+
+forecast:
+  origin_local_time: "11:00"
+  origin_days_before_delivery: 1
+  assume_previous_day_curve_available: true
+
+splits:
+  warmup: ["2023-01-01", "2023-01-07"]
+  training: ["2023-01-08", "2023-02-18"]
+  validation:
+    - ["2023-02-19", "2023-02-25"]
+    - ["2023-02-26", "2023-03-04"]
+    - ["2023-03-05", "2023-03-11"]
+  evaluation: ["2023-03-12", "2023-04-01"]
+
+features:
+  price_lag_days: [1, 7]
+  calendar: [hour, weekday, repeated_hour_occurrence]
+  numeric_scaling: standard
+  categorical_encoding: fixed_one_hot
+  hour_categories: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+  weekday_categories: [0, 1, 2, 3, 4, 5, 6]
+  occurrence_categories: [0, 1]
+  missing_price_policy: fail
+
+alignment:
+  key: local_hour_and_occurrence
+  missing_occurrence: same_hour_available_occurrence
+  missing_hour: source_day_mean
+  incomplete_source_day: fail
+
+ridge:
+  alphas: [0.1, 1.0, 10.0, 100.0]
+  fit_intercept: true
+  validation_refit: before_each_block
+  validation_training_window: expanding
+  final_refit: once_before_evaluation
+  refit_during_evaluation: false
+  alpha_tie_break: larger_alpha
+
+selection:
+  metric: pooled_validation_duration_weighted_mae
+  seasonal_tie_relative_tolerance: 0.01
+  seasonal_tie_preference: previous_day
+  seasonal_zero_mae_tie: exact_zero_only
+
+evaluation:
+  metrics: [mae, rmse, bias]
+  weighting: interval_duration_hours
+  comparison_intervals: common_successful_targets
+  unexplained_prediction_failures_block_release: true
+  bias_sign: prediction_minus_actual
+  report_prediction_failures: true
+  report_dst_substitutions: true
+  high_price_quantile: 0.95
+  high_price_threshold_source: initial_training_targets
+  high_price_quantile_method: linear
+  breakdowns: [delivery_day, month, local_hour, negative_price, high_price]
+  metric_reproduction_tolerance: 0.000001
