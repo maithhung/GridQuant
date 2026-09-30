@@ -390,7 +390,6 @@ demo_inputs/
 │       ├── basic.json
 │       ├── negative_price.json
 │       └── shortage.json
-├── expected/
 ├── pyproject.toml
 ├── uv.lock
 └── bundle_manifest.json
