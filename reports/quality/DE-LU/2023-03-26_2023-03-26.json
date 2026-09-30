@@ -1,0 +1,33 @@
+{
+  "calendar_timezone": "Europe/Berlin",
+  "coverage": {
+    "coverage_percent": 100.0,
+    "delivery_date": "2023-03-26",
+    "duplicate_starts": [],
+    "expected_count": 23,
+    "has_complete_start_grid": true,
+    "interval_minutes": 60,
+    "matched_count": 23,
+    "missing_starts": [],
+    "observed_count": 23,
+    "unexpected_starts": []
+  },
+  "dataset": {
+    "metadata": {
+      "availability_evidence": "unknown",
+      "availability_note": "Saved historical response; publication time and historical revision availability have not been established.",
+      "raw_sha256": "d53abe808b52424ba5a710b95cf0814408f66525c678311ab35410ccde55a941",
+      "retrieved_at_utc": "2026-09-27T09:21:11.850142+00:00",
+      "source": "Energy-Charts",
+      "source_document_id": "data/raw/energy_charts/DE-LU/2023-03-26_2023-03-26.json",
+      "source_publication_date": null,
+      "source_revision": null
+    },
+    "normalization_version": 1,
+    "schema_version": 1,
+    "series_id": "day_ahead_price",
+    "unit": "EUR/MWh"
+  },
+  "report_schema_version": 1,
+  "scope": "Interval-start coverage only. Interval ends, price conflicts, record order, and forecast-time availability are not validated by this report."
+}

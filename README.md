@@ -74,6 +74,44 @@ retries, refresh, atomic writes, and revision storage are future work.
 See the [source contract and attribution](docs/data_sources.md) and
 [historical sample checks](reports/historical_sample_coverage.md).
 
+### Normalized storage and coverage reports
+
+The same example now writes a Parquet dataset under
+`data/processed/energy_charts/DE-LU/` and matching JSON/Markdown reports under
+`reports/quality/DE-LU/`, using the sample date range as the filename.
+It checks that loading the Parquet file reproduces the original dataset.
+Parquet support uses PyArrow, included in the locked dependencies.
+
+```python
+from datetime import date
+from pathlib import Path
+
+from gridquant.data.normalized import load_dataset, save_dataset
+from gridquant.data.reporting import save_quality_reports
+
+# dataset is the PriceDataset assembled from verified raw bytes and a manifest.
+path = Path("data/processed/example.parquet")
+save_dataset(path, dataset)
+restored = load_dataset(path)
+save_quality_reports(restored, date(2026, 9, 26), 15, Path("reports/example.json"))
+```
+
+Parquet stores UTC starts/ends, EUR/MWh prices, and bidding zones, plus embedded
+source metadata, original retrieval time, raw hash, units, and schema/normalization
+versions. Raw responses and their manifests remain the source evidence, including
+request parameters and attribution. Loading Parquet does not reverify raw files.
+
+Equal datasets and identical reports are reused on replay. Different content at
+an existing output path raises an error; choose a new path for revised outputs.
+Row order and duplicates are preserved. Writes are sequential, not atomic;
+Parquet byte identity across library versions is not guaranteed.
+
+Reports check **interval-start coverage only** against a Europe/Berlin calendar.
+They list missing, duplicated, and unexpected starts. Coverage uses unique
+matching starts; 100% alone does not imply a complete grid if extra rows exist.
+Interval ends, price conflicts, ordering, and historical availability remain
+outside this check. No forecasting eligibility is inferred from a passing report.
+
 ## Development
 
 ```sh

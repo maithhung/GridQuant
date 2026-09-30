@@ -1,6 +1,6 @@
 import hashlib
 import json
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 from gridquant.collectors.energy_charts import (
@@ -8,9 +8,11 @@ from gridquant.collectors.energy_charts import (
     fetch_price_response,
     parse_price_response,
 )
-from gridquant.data.storage import build_manifest, save_response
-
 from gridquant.data.models import DatasetMetadata, PriceDataset
+from gridquant.data.normalized import load_dataset, save_dataset
+from gridquant.data.quality import check_daily_coverage
+from gridquant.data.reporting import save_quality_reports
+from gridquant.data.storage import build_manifest, save_response
 
 # Select the bidding zone and local delivery dates.
 parameters = {
@@ -105,6 +107,30 @@ dataset = PriceDataset(
     metadata=metadata,
     intervals=tuple(intervals),
 )
+delivery_date = date.fromisoformat(parameters["start"])
+if parameters["start"] != parameters["end"]:
+    raise ValueError("This practice example reports one delivery day at a time.")
+report = check_daily_coverage(dataset, delivery_date, interval_minutes=15)
+print(report)
+print(f"Coverage: {report.coverage_percent:.2f}%")
+
+# Save the normalized snapshot separately from the original response.
+processed_path = (
+    Path("data/processed/energy_charts")
+    / parameters["bzn"]
+    / f"{sample_path.stem}.parquet"
+)
+save_dataset(processed_path, dataset)
+if load_dataset(processed_path) != dataset:
+    raise ValueError("Normalized dataset did not survive the storage round trip.")
+report_paths = save_quality_reports(
+    dataset,
+    delivery_date,
+    15,
+    Path("reports/quality") / parameters["bzn"] / f"{sample_path.stem}.json",
+)
+print(f"Normalized dataset: {processed_path}")
+print(f"Quality reports: {report_paths[0]}, {report_paths[1]}")
 
 print(f"Series: {dataset.series_id}")
 print(f"Source: {dataset.metadata.source}")
